@@ -4,7 +4,7 @@ Built on GitHub Pages, static enables the creation of basic microsites, targetin
 
 ## How it Works
 
-Using a `static.json` file, our GitHub Action automatically deploys a static, single-page application that acts as a simple data portal.
+Using a `static.json` file, our GitHub Action automatically deploys a static, single-page application based on the `type`.
 
 Under the hood, we translate your `static.json` to a fully functional microsite built on Next.js.
 
