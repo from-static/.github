@@ -12,9 +12,11 @@ Start with our minimum required configuration, then rely on the automatic deploy
 
 ## Features + Roadmap
 - [x] Proof-of-Concept: `type: "RESUME"`
+  - [from-static/example-resume](https://github.com/from-static/example-resume) is a "user-land" implementation of `type: "RESUME"`
 - [ ] Add initial theme for `type: "RESUME"`
-- [ ] Provide JSON Schema for `static.json`
 - [ ] Document `static.json`
+- [ ] Provide JSON Schema for `static.json`
+- [ ] Convert `example-resume` to template repository
 - [ ] Add `static dev` CLI utility for local previews of `static.json`
-- [ ] Support for `type: "RESEARCH_DATA_PORTAL`
+- [ ] Support for `type: "RESEARCH_DATA_PORTAL"`
 - [ ] Add `static eject` CLI utility for "ejecting" from the static ecosystem
