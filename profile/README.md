@@ -1,5 +1,14 @@
 # static
 
+---
+
+🧪 **static is in early development preview.** There will likely be some churn of the `static.json` structure. Unless you are willing to accept some temporary maintenance burden, I don't suggest configuring a site just yet!
+
+Questions/Feedback? [Open an Issue](https://github.com/from-static/.github/issues).
+
+---
+
+
 Built on GitHub Pages, static enables the creation of basic microsites, targeting a variety of use cases.
 
 ## How it Works
