@@ -10,13 +10,17 @@ Under the hood, we translate your `static.json` to a fully functional microsite 
 
 Start with our minimum required configuration, then rely on the automatic deployments based on changes to your `static.json` file to enhance functionality.
 
+## Get Started
+
+1. Create a new repository from one of our templates.
+   - [from-static/example-resume](https://github.com/from-static/example-resume)
+2. Enable GitHub Actions as your GitHub Pages Source in your new repository.
+3. Edit the `static.json`
+4. Wait for the GitHub Action to run...
+5. View your generated microsite at your repository's GitHub Pages URL.
+
+That's it! Any changes you make to `static.json` will automatically redeploy your site.
+
 ## Features + Roadmap
-- [x] Proof-of-Concept: `type: "RESUME"`
-  - [from-static/example-resume](https://github.com/from-static/example-resume) is a "user-land" implementation of `type: "RESUME"`
-- [ ] Add initial theme for `type: "RESUME"`
-- [ ] Document `static.json`
-- [ ] Provide JSON Schema for `static.json`
-- [ ] Convert `example-resume` to template repository
-- [ ] Add `static dev` CLI utility for local previews of `static.json`
-- [ ] Support for `type: "RESEARCH_DATA_PORTAL"`
-- [ ] Add `static eject` CLI utility for "ejecting" from the static ecosystem
+
+- [static GitHub Project](https://github.com/orgs/from-static/projects/1/views/1)
