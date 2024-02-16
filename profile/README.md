@@ -2,6 +2,12 @@
 
 Built on GitHub Pages, static enables the creation of basic microsites, targeting a variety of use cases.
 
+static is more of an application design approach rather than a framework or library.
+
+A `static.json` file acts as a data source for a static site generator, static assets produced by the generator are then hosted on GitHub Pages – _that's it_.
+
+From a downstream consumer perspective, the `static.json` file becomes a build manifest, configuration file, and even content management system depending on target generator's usage.
+
 ---
 
 🧪 **static is in early development preview.** There will likely be some churn of the `static.json` structure. Unless you are willing to accept some temporary maintenance burden, I don't suggest configuring a site just yet!
@@ -12,7 +18,7 @@ Questions/Feedback? [Open an Issue](https://github.com/from-static/.github/issue
 
 ## How it Works
 
-Using a `static.json` file, our GitHub Action automatically deploys a static, single-page application to GitHub Pages based on your configuration.
+Using a `static.json` file, our reusable GitHub Action workflows automatically deploy a static, single-page application to GitHub Pages based on your configuration.
 
 Our first-class applications translate your `static.json` to a fully functional microsite built on Next.js.
 
@@ -40,22 +46,19 @@ Instructs our GitHub Action on how to build your application.
 ```json
 {
   "_static": {
-    "application": "git@github.com:from-static/static-resume.git",
-    "version": "0.1.0"
+    "generator": "from-static/static-resume",
   },
 }
 ```
-- `application` should reference a Next.js application that will process your `static.json` file. 
+- `generator` should reference a static site generator (usually a Next.js application) that will process your `static.json` file. 
   - In most cases, this will be one of our first-class applications:
-    - [git@github.com:from-static/static-resume.git](from-static/static-resume)
-- `version` is an optional version tag that our GitHub Action will use for checkout and validation.
+    - [from-static/static-resume](from-static/static-resume)
 
 ### Additional Properties
 
-An `application` dictates all additional properties in a `static.json`. 
+A `generator` dictates all additional properties in a `static.json`.
 
-While there are some properties we suggest all applications treat the same, we cannot enforce this standard outside of our first-class applications.
-
+While there are some properties we suggest all applications treat the same, we do not enforce this standard outside of our first-class applications.
 
 ## Features + Roadmap
 
