@@ -64,27 +64,7 @@ Instructs our GitHub Action on how to build your application.
 
 The `data` member of the `static.json` file acts as a data source for a static site generator.
 
-```json
-{
-  "data": {
-    "version": "1.0.0",
-    "attributes": {
-      // ...
-    }
-  }
-}
-
-```json
-{
-  "data": {
-    "version": "1.0.0",
-    "attributes": {
-      // ...
-    }
-  }
-}
-
-```json
+```jsonc
 {
   "data": {
     "version": "1.0.0",
