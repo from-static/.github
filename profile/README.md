@@ -1,18 +1,17 @@
-# static
+# `static`
 
-Built on GitHub Pages, static enables the creation of basic microsites, targeting a variety of use cases.
 
-static is more of an application design approach rather than a framework or library.
+## Overview
 
-A `static.json` makes reference to a **`generator`** package, which is responsible for processing the `static.json` file and producing a static site.
+- `static` enables the creation of ready-to-serve web applications and websites, targeting a variety of use cases.
+- `static` is more of an application design approach rather than a framework or library.
+- A `static.json` file references a **`generator`** package, which is responsible for processing the file and producing a static site (i.e., a static site generator).
+- The `data` member of the `static.json` file acts as a data source for a static site generator.
+- Generated assets produced by the generator are then hosted on GitHub Pages – _that's it_.
 
-The `data` member of the `static.json` file acts as a data source for a static site generator, static assets produced by the generator are then hosted on GitHub Pages – _that's it_.
-
-From a downstream consumer perspective, the `static.json` file becomes a build manifest, configuration file, and even content management system depending on target generator's usage.
+From a downstream consumer perspective, the `static.json` file acts as a build manifest, configuration file, and even content management system depending on the target generator's usage.
 
 ---
-
-🧪 **static is in early development preview.** There will likely be some churn of the `static.json` structure. Unless you are willing to accept some temporary maintenance burden, I don't suggest configuring a site just yet!
 
 Questions/Feedback? [Open an Issue](https://github.com/from-static/.github/issues).
 
@@ -20,9 +19,9 @@ Questions/Feedback? [Open an Issue](https://github.com/from-static/.github/issue
 
 ## How it Works
 
-Using a `static.json` file, our reusable GitHub Action workflows automatically deploy a static, single-page application to GitHub Pages based on your configuration.
+Using a `static.json` file, our reusable GitHub Action workflows automatically deploy a single-page application to GitHub Pages based on your configuration.
 
-Our first-class applications translate your `static.json` to a fully functional microsite built on Next.js.
+Our first-class applications ("generators") translate your `static.json` to a fully functional microsite built on Next.js.
 
 Start with our minimum required configuration, then rely on the automatic deployments based on changes to your `static.json` file to enhance functionality.
 
@@ -52,11 +51,11 @@ Instructs our GitHub Action on how to build your application.
   },
 }
 ```
-- `generator` should reference a static site generator (usually a Next.js application) that will process your `static.json` file.
+- `generator` should reference a static site generator (usually a Next.js application) that will process your `static.json` file and build the resulting application.
   - The generator should match the name of a package found in the configured package ecosystem (see below).
   - In most cases, this will be a first-class application:
     - [from-static/static-resume](https://github.com/from-static/example-resume)
-- `ecosystem` is an optional property that can be used to specify a package registry to use for the `generator` package. If not specified, the default registry (`npm`) is used.
+- `ecosystem` is an optional property that specifies a package registry for the `generator` package. If not specified, the default registry (`npm`) is used.
   - Supported Values: `npm`
 
 
@@ -74,8 +73,8 @@ The `data` member of the `static.json` file acts as a data source for a static s
   }
 }
 ```
-- `version` is a string that represents the version of the `data` object to be consumed (and enforced) by the generator.
-- `attributes` is an object that contains all data that will be used to generate the static site.
+- `version` –  A string representing the version of the data object. The generator can use this value to identify the expected shape of attributes.
+- `attributes` – An object containing data the generator will use to generate the application.
 
 ### Additional Properties (`data.attributes`)
 
