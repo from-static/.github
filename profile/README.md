@@ -1,10 +1,7 @@
-# `static`
-
-
 ## Overview
 
-- `static` enables the creation of ready-to-serve web applications and websites, targeting a variety of use cases.
-- `static` is more of an application design approach rather than a framework or library.
+- `from-static` enables the creation of ready-to-serve web applications and websites, targeting a variety of use cases.
+- `from-static` is more of an application design approach rather than a framework or library.
 - A `static.json` file references a **`generator`** package, which is responsible for processing the file and producing a static site (i.e., a static site generator).
 - The `data` member of the `static.json` file acts as a data source for a static site generator.
 - Generated assets produced by the generator are then hosted on GitHub Pages – _that's it_.
